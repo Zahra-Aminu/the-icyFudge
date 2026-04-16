@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The IcyFudge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">The IcyFudge</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#cart">Cart</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+
+  <div class="hero-tags">
+    <span>Milk Cakes</span>
+    <span>Birthday Cakes</span>
+    <span>Cupcakes</span>
+    <span>Cake Slices</span>
+    <span>Bento</span>
+    <span>Snacks</span>
+    <span>Custom Orders</span>
+  </div>
+
+  <h1>Welcome to The IcyFudge</h1>
+  <p>making cute cakes for a living 🤍</p>
+
+</section>
+
+
+<section id="about" class="about">
+  <h2>About Us</h2>
+  <p>We make delicious cakes and snacks for every occasion. Quality ingredients, baked daily.</p>
+</section>
+
+
+<section id="products" class="products">
+  <h2>Samples of our Products</h2>
+  <div class="product-grid"></div>
+</section>
+
+
+<section id="cart" class="cart">
+  <h2>Your Cart</h2>
+  <div class="cart-items">
+    <p>Your cart is empty.</p>
+  </div>
+  <p class="total">Total: ₦0</p>
+  <button id="checkout-btn">Checkout</button>
+</section>
+
+
+<div id="checkoutModal" class="checkout-overlay">
+
+  <div class="checkout-box">
+
+   
+    <div id="step1">
+      <h2>Checkout</h2>
+
+      <div id="order-summary"></div>
+
+      <form id="checkoutForm">
+        <input type="text" id="customerName" placeholder="Your Name" required>
+        <input type="tel" id="customerPhone" placeholder="Phone Number" required>
+        <textarea id="customerAddress" placeholder="Delivery Address" required></textarea>
+
+        <button type="submit">Continue to Payment</button>
+        <button type="button" id="closeCheckout">Cancel</button>
+      </form>
+    </div>
+
+    
+    <div id="step2" style="display:none;">
+      <h2>Payment</h2>
+
+      <div id="cardFields">
+        <input type="text" id="cardNumber" placeholder="Card Number">
+        <input type="text" id="expiry" placeholder="MM/YY">
+        <input type="text" id="cvv" placeholder="CVV">
+      </div>
+
+      <button type="button" id="payNow">Pay Now</button>
+      <button type="button" id="backToForm">Back</button>
+    </div>
+
+    
+    <div id="processing" style="display:none;">
+      <p>Processing payment...</p>
+    </div>
+
+    
+    <div id="success" style="display:none;">
+      <p>🎉 Payment successful! Order placed.</p>
+      <button id="closeSuccess">Close</button>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2026 The Icy Fudge. All rights reserved.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
